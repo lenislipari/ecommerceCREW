@@ -1,0 +1,84 @@
+.sectionForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formLogin {
+    width: 25rem;
+    margin: 1%;
+    text-align: center;
+    display: grid;
+    
+}
+
+.linkDetalle {
+    text-decoration: none;
+    color: rgb(243, 191, 48);
+}
+
+.cardDetalle {
+width: 80%;
+position: center;
+}
+
+.divPadre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card1 {
+    text-align: center;
+    padding: 3%;;
+}
+
+.card2{
+    padding: 2%;
+}
+
+.counter {
+    width: 15rem;
+    height: 8rem;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+
+.button-buy {
+display: inline-block;
+outline: 0;
+border: none;
+cursor: pointer;
+padding: 0 24px;
+border-radius: 50px;
+min-width: 200px;
+height: 50px;
+font-size: 18px;
+background-color: #fd0;
+font-weight: 500;
+color: #222;
+margin: 1rem;
+}
+
+.button-masmenos{
+display: inline-block;
+outline: 0;
+border: none;
+cursor: pointer;
+height: 40px;
+padding: 12px 17px;
+border-radius: 50px;
+background-color: #2222220d;
+color: #222;
+font-size: 16px;
+font-weight: 500;
+margin: 0.5rem;
+text-align: center;
+padding-bottom: 2.5rem;
+}
+
+.button-masmenos:hover {
+    background-color: #2222221a;
+}

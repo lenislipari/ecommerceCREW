@@ -3,12 +3,13 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import CartWidget from './CartWidget';
 
+
 function NavBar() {
   return (
     <>
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="/">
           <img
               src="/images/logoCrew.png"
               width="50"
@@ -17,10 +18,10 @@ function NavBar() {
               alt="React Bootstrap logo"
             />
             </Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">New in</Nav.Link>
-            <Nav.Link href="#pricing">All models</Nav.Link>
+            
+          <Nav className="justify-content-end" >
+            <Nav.Link href="/form">Login</Nav.Link>
+            <Nav.Link href="/form">Register</Nav.Link>
           </Nav>
           <CartWidget/>
         </Container>

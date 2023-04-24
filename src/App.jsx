@@ -1,19 +1,28 @@
-import { useState } from 'react'
 import './App.css'
-import Carousel from './components/Carousel'
-import Container from './components/ItemListContainer'
+import FormLogin from './components/Form/FormLogin';
+import ItemDetailContainer from './components/ItemDetailContainer';
+import ItemListContainer from './components/ItemListContainer'
 import NavBar from './components/NavBar'
+import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-router-dom";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  
   return (
-    <div className="App">
-        <NavBar/>
-        <Carousel/>
-        <Container greeting= 'Bienvenidos'/>
+    <Router>
+      <NavBar/>
       
-    </div>
+      <Routes>
+        <Route path='/' element={<ItemListContainer/>} />
+        <Route path='/itemDetail/:id' element={<ItemDetailContainer/>} />
+        <Route path='/form' element={<FormLogin/>} />
+        
+
+        
+
+      </Routes>
+    
+    </Router>
+  
   )
 }
 
