@@ -13,6 +13,7 @@ function App() {
       
       <Routes>
         <Route path='/' element={<ItemListContainer/>} />
+        <Route path='/marca/:marca' element={<ItemListContainer/>} />
         <Route path='/itemDetail/:id' element={<ItemDetailContainer/>} />
         <Route path='/form' element={<FormLogin/>} />
         

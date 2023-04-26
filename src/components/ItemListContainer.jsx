@@ -4,23 +4,36 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Filter from "./Filter";
 import Carousel from "./Carousel"
-import {Link} from "react-router-dom"
+import {Link, useParams} from "react-router-dom"
 
 
 
-const ItemListContainer = ({ greeting }) => {
+const ItemListContainer = () => {
 
     const [productos, setProductos] = useState([])
     const [isLoading, setIsLoading] = useState(true)
 
-    useEffect(() => {
-        mFetch()
+    const {marca} = useParams()
 
+    useEffect(() => {
+        if(!marca){
+            mFetch()
+    
+                .then(resultado => {
+                    setProductos(resultado)
+                })
+                .catch(error => console.log(error))
+                .finally(() => setIsLoading(false))
+
+        }else{
+            mFetch()
+    
             .then(resultado => {
-                setProductos(resultado)
+                setProductos(resultado.filter(producto => producto.marca === marca))
             })
             .catch(error => console.log(error))
             .finally(() => setIsLoading(false))
+        }
     }, [])
 
     const handleProductFiltered = ({ filterState, handleFilterChange }) => (
